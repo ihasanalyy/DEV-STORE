@@ -1,0 +1,6 @@
+const Home = () =>{
+    return (
+        <h1>HOMEPAGE</h1>
+    )
+}
+export {Home}
