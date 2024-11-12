@@ -4,7 +4,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
 import { Link } from 'react-router-dom';
-
+import './Navbar.css';
 
 
 const Navbar = () => {
@@ -21,32 +21,41 @@ const Navbar = () => {
                         <ExpandMoreIcon />
                     </div>
                     <div className='item'>
-                        <Link to='/products/1'>Women</Link>
+                        <Link className='link' to='/products/1'>Women</Link>
                     </div>
                     <div className='item'>
-                        <Link to='/products/2'>Men</Link>
+                        <Link className='link' to='/products/2'>Men</Link>
                     </div>
                     <div className='item'>
-                        <Link to='/products/3'>Children</Link>
+                        <Link className='link' to='/products/3'>Children</Link>
                     </div>
                 </div>
                 <div className="center">
                     <div className="logo">
-                        <Link to='/'>DEV STORE</Link>
+                        <Link className='link' to='/'>DEV STORE</Link>
                     </div>
                 </div>
                 <div className="right">
                     <div className="item">
-                        <Link to='/'>HOMAPAGE</Link>
+                        <Link className='link' to='/'>HOMAPAGE</Link>
                     </div>
                     <div className="item">
-                        <Link to='/'>ABOUT US</Link>
+                        <Link className='link' to='/'>ABOUT</Link>
                     </div>
                     <div className="item">
-                        <Link to='/'>CONTACT</Link>
+                        <Link className='link' to='/'>CONTACT</Link>
                     </div>
                     <div className="item">
-                        <Link to='/'>STORES</Link>
+                        <Link className='link' to='/'>STORES</Link>
+                    </div>
+                    <div className='icons'>
+                        <SearchIcon />
+                        <PersonOutlinedIcon />
+                        <FavoriteBorderOutlinedIcon />
+                        <div className='cartIcon'>
+                            <ShoppingCartOutlinedIcon />
+                            <span>0</span>
+                        </div>
                     </div>
                 </div>
             </div>

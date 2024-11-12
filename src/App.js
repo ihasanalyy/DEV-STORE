@@ -14,7 +14,7 @@ const Layout = () => {
   return (
     <div className="App">
       <Navbar />
-      <Outlet />
+      {/* <Outlet /> */}
       <Footer />
     </div>
   )
