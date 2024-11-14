@@ -1,0 +1,36 @@
+.container{
+    display: flex;
+    width: 300vw;
+    /* transform: translateX(-100vw); */
+}
+.container img {
+    width: 80vw;
+    margin: auto;
+    height: 80vh;
+    object-fit: cover;
+}
+
+.slider {
+    /* width: 80%; */
+    width: 100vw;
+    height: calc(100vh - 80px);
+    position: relative;
+}
+.ikons{
+    width: fit-content;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    bottom: 100px;
+    gap: 10px;
+}
+.icon{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -12,9 +12,9 @@ import { Footer } from './/Components/Footer/Footer';
 
 const Layout = () => {
   return (
-    <div className="App">
+    <div className="App" style={{overflowX: 'hidden'}}>
       <Navbar />
-      {/* <Outlet /> */}
+      <Outlet />
       <Footer />
     </div>
   )

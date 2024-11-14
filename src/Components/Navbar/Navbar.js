@@ -5,6 +5,7 @@ import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlin
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import React from 'react';
 
 
 const Navbar = () => {
@@ -40,7 +41,7 @@ const Navbar = () => {
                         <Link className='link' to='/'>HOMAPAGE</Link>
                     </div>
                     <div className="item">
-                        <Link className='link' to='/'>ABOUT</Link>
+                        <Link className='link' to='/'>ABOUT US</Link>
                     </div>
                     <div className="item">
                         <Link className='link' to='/'>CONTACT</Link>
