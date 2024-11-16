@@ -1,0 +1,90 @@
+
+.card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-around;
+    margin: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Move slightly upwards */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Add a subtle shadow */
+}
+
+.image{
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+.image:hover .secondImg {
+    /* z-index: 2; */
+
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+} */
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.image span{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: white;
+    color: teal;
+    padding: 3px 5px;
+    z-index: 3;
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.firstImg{
+    z-index: 1;
+}
+h2{
+    font-weight: 400;
+    font-size: 16px;
+}
+.price{
+    display: flex;
+    gap: 20px;
+}
+.price h3{
+    font-weight: 500;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.price h3:first-child{
+    color: gray;
+    text-decoration: line-through;
+}
+.image:hover .firstImg {
+    opacity: 0;
+    transform: scale(1.05); /* Zoom out the first image slightly */
+}
+.image:hover span {
+    opacity: 1;
+    transform: translateY(0);
+}
+.card:hover .price h3 {
+    transform: translateY(-5px);
+    color: teal;
+}
