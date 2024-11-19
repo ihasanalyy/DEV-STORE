@@ -1,0 +1,10 @@
+.products{
+    border: 1px solid black;
+    display: flex;
+}
+.Productsleft{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    width: 30%;
+}
