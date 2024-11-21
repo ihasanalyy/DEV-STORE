@@ -27,3 +27,9 @@
     font-size: 18px;
     font-weight: 500;
 }
+.inputItem{
+    margin-bottom: 10px;
+}
+.inputItem label{
+    margin-left: 10px;
+}
