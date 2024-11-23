@@ -12,6 +12,9 @@
 
 .rightProduct {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 .productImage{
 flex: 1;
@@ -30,4 +33,65 @@ flex: 5;
     width: 100%;
     max-height: 800px;
     object-fit: cover;
+}
+.price{
+    font-size: 30px;
+    color: #2879fe;
+    font-weight: 500;
+}
+.rightProduct p{
+    text-align: justify;
+    font-weight: 300;
+    font-style: 18px;
+}
+.quantity{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.quantity button{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+}
+.add{
+    background-color: #2879fe;
+    color: white;
+    width: 250px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-weight: 500;
+}
+.links{
+    display: flex;
+    gap: 20px;
+}
+.linkItems{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #2879fe;
+    font-style: 14px;
+    cursor: pointer;
+}
+.info{
+    display: flex;
+    color: gray;
+    font-style: 14px;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+}
+.info span{
+    border-bottom: 1px solid lightgray;
+    width: 200px;
 }
