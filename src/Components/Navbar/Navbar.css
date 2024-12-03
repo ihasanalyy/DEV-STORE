@@ -1,4 +1,4 @@
-.navbar{
+/* .navbar{
     height: 80px;
 }
 .wrapper{
@@ -47,4 +47,142 @@
 }
 .cartIcon{
     position: relative;
+} */
+
+/* Navbar styles */
+/* Navbar base styles */
+.navbar {
+    height: 80px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left, .right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.center {
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+    color: #777;
+    cursor: pointer;
+}
+
+.cartIcon {
+    position: relative;
+}
+
+.cartIcon span {
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    background-color: #2879fe;
+    border-radius: 50%;
+    color: white;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+/* Mobile menu items */
+.mobile-menu-items {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu-items .link {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Responsive styles for screen sizes < 768px */
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .center {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .left, .right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .mobile-menu-items .link {
+        font-size: 18px;
+        padding: 15px 0;
+    }
+}
+
+/* Additional styling for very small screens */
+@media (max-width: 480px) {
+    .center {
+        font-size: 20px;
+    }
+
+    .item {
+        font-size: 12px;
+    }
+
+    .cartIcon span {
+        font-size: 10px;
+        width: 16px;
+        height: 16px;
+    }
 }

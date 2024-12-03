@@ -37,27 +37,53 @@ const Card = ({ item }) => {
     }
 
     return (
+        // <Link className="link" to={`/product/${item.id}`}>
+        //     <div className="card">
+        //         <div className="image">
+        //             {item.isNew && <span>New Season</span>}
+        //             {
+        //                 item.images.length > 1 ? (<img src={item.images[0]} alt={item.title} className="firstImg" />)
+        //                 (<img src={item.images[1]} alt={item.title} className="secondImg" />) : <img src={item.image} alt={item.title} className="firstImg" />
+        //             }
+                    
+                  
+        //         </div>
+        //         <h2>{item.title || "Untitled Product"}</h2>
+        //         <div className="price">
+        //             {item.price ? (
+        //                <h3 className="normal-price">${item.price}</h3>
+        //             ) : (
+        //                 <h3 className="oldPrice">${item.oldPrice}</h3>
+        //             )}
+        //         </div>
+        //     </div>
+        // </Link>
+
         <Link className="link" to={`/product/${item.id}`}>
-            <div className="card">
-                <div className="image">
-                    {item.isNew && <span>New Season</span>}
-                    <img src={item.images[1]} alt={item.title} className="firstImg" />
-                    {item.images && Array.isArray(item.images) && item.images.length > 1 ? (
-                        <img src={item.images[0]} alt={item.title} className="secondImg" />
-                    ) : (
-                        <img src={item.image} alt={item.title} className="firstImg" />
-                    )}
-                </div>
-                <h2>{item.title.slice(0,20) || "Untitled Product"}</h2>
-                <div className="price">
-                    {item.price ? (
-                        <h3 className="normal-price">${item.price}</h3>
-                    ) : (
-                        <h3 className="normal-price">Price unavailable</h3>
-                    )}
-                </div>
-            </div>
-        </Link>
+    <div className="card">
+        <div className="image">
+            {item.isNew && <span>New Season</span>}
+            {item.images?.length > 1 ? (
+                <>
+                    <img src={item.images[0]} alt={item.title || "Product Image"} className="firstImg" />
+                    <img src={item.images[1]} alt={item.title || "Product Image"} className="secondImg" />
+                </>
+            ) : (
+                <img src={item.image || "placeholder.jpg"} alt={item.title || "Product Image"} className="firstImg" />
+            )}
+        </div>
+        <h2>{item.title || "Untitled Product"}</h2>
+        <div className="price">
+            {item.oldPrice && <h3 className="oldPrice">${item.oldPrice}</h3>}
+            {item.price ? (
+                <h3 className="normal-price">${item.price}</h3>
+            ) : (
+                <h3 className="normal-price">Price unavailable</h3>
+            )}
+        </div>
+    </div>
+</Link>
+
     );
 };
 

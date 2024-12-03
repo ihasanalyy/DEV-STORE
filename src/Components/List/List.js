@@ -22,11 +22,14 @@ import React from 'react';
 import { Card } from '../Card/Card';
 import './List.css';
 
-const List = ({ data }) => {
-    if (!Array.isArray(data)) {
-        console.error("Expected an array but received:", data);
-        return <div>No items to display.</div>;
-    }
+const List = ({ data,maxPrice,catId,sort }) => {
+    // const {id,price,category} = data
+    // console.log(id,price,category)
+    // if (!Array.isArray(data)) {
+    //     console.error("Expected an array but received:", data);
+    //     return <div>No items to display.</div>;
+    // }
+    console.log(data)
 
     return (
         <div className="list">

@@ -64,19 +64,19 @@ h2{
     font-weight: 400;
     font-size: 16px;
 }
-.price{
+/* .price{
     display: flex;
     gap: 20px;
 }
-.price h3{
+.normal-price{
     font-weight: 500;
     font-size: 18px;
     transition: color 0.3s ease, transform 0.3s ease;
-}
-.price h3:first-child{
+} */
+/* .oldPrice{
     color: gray;
     text-decoration: line-through;
-}
+} */
 .image:hover .firstImg {
     opacity: 0;
     transform: scale(1.05); /* Zoom out the first image slightly */
@@ -85,7 +85,25 @@ h2{
     opacity: 1;
     transform: translateY(0);
 }
-.card:hover .price h3 {
+.card:hover .normal-price {
     transform: translateY(-5px);
     color: teal;
+}
+
+
+.price {
+    display: flex;
+    align-items: center; /* Align prices vertically */
+    gap: 10px; /* Adjust gap for tighter spacing */
+}
+.normal-price {
+    font-weight: 500;
+    font-size: 18px;
+    color: black;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.oldPrice {
+    font-size: 16px; /* Slightly smaller for differentiation */
+    color: gray;
+    text-decoration: line-through;
 }
